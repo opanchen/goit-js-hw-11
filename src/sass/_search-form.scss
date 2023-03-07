@@ -1,0 +1,152 @@
+// *Basic styles:
+h1, h2, h3, h4, h5, h6, p, ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  } 
+
+  .visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.container {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+     //todo Breakpoint MOBILE:
+     @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+
+    //todo Breakpoint TABLET:
+    @media screen and (min-width: 768px) {
+        width: 824px;
+    }
+
+    //todo Breakpoint DESKTOP:
+    @media screen and (min-width: 1200px) {
+        width: 1204px;
+    }
+}
+// *
+
+body {
+    background-color: #f5f4fa;
+}
+
+.search-form {
+    // outline: dashed 1px red;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    display: inline-flex;
+    gap: 12px;
+    padding: 8px 12px;
+
+}
+
+.search-form__input {
+width: 200px;
+padding: 4px 8px;
+
+}
+
+.search-form__btn,
+.load-more {
+    padding: 4px 8px;
+
+    color: white;
+    background-color: rgb(116, 209, 238);
+    border-color: rgb(33, 173, 216);
+    border-radius: 4px;
+    
+    cursor: pointer;
+
+}
+
+.search-form__btn:hover,
+.search-form__btn:focus,
+.load-more:focus,
+.load-more:hover {
+    background-color: rgb(227, 238, 238);
+    color: rgb(33, 173, 216);
+}
+
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.photo-card {
+    // outline: dashed 1px teal;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 380px;
+
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.thumb {
+    height: 240px;
+
+}
+
+// .thumb img {
+//     object-fit: fill;
+// }
+
+
+.info {
+// outline: dotted 1px tomato;
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+}
+
+.info-item {
+    // outline: dotted 1px green;
+
+display: flex;
+flex-direction: column;
+gap: 8px;
+align-items: center;
+padding: 0 4px;
+}
+
+.load-more {
+    margin: 24px auto 24px auto;
+
+}
