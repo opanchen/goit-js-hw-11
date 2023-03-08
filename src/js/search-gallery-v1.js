@@ -1,7 +1,7 @@
 import { Notify } from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-import { SearchAPI } from './search-api';
+import { SearchAPI } from './search-api-v1';
 import {
   showImgGallery,
   clearImgGallery,

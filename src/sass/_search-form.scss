@@ -45,6 +45,11 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 // *
 
+.task-variations {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
 body {
     background-color: #f5f4fa;
 }

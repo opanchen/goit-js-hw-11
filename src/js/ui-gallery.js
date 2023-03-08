@@ -59,11 +59,17 @@ function clearImgGallery() {
 function checkElementsQuantity(maxNumber) {
   console.log(`${refs.gallery.children.length} images of ${maxNumber}`);
 
+  let shouldStop = false;
+
   if (refs.gallery.children.length === maxNumber) {
     Notify.info("We're sorry, but you've reached the end of search results.");
     refs.loadMoreBtn.style.display = 'none';
+    shouldStop = true;
   }
+  return shouldStop;
 }
+
+// console.log(shouldStop);
 
 function adjustPageScroll() {
   const { height: cardHeight } =
