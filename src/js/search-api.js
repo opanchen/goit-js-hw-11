@@ -2,7 +2,7 @@ import { Notify } from 'notiflix';
 const axios = require('axios').default;
 
 export class SearchAPI {
-  static #API_KEY = '34194701-2813288863e2fdf221136bb42';
+  static API_KEY = '34194701-2813288863e2fdf221136bb42';
   static BASE_URL = 'https://pixabay.com/api/';
 
   constructor() {
@@ -12,7 +12,7 @@ export class SearchAPI {
 
   fetchImages() {
     const searchParams = new URLSearchParams({
-      key: SearchAPI.#API_KEY,
+      key: SearchAPI.API_KEY,
       q: this.searchQuery,
       image_type: 'photo',
       orientation: 'horizontal',
