@@ -1,5 +1,5 @@
 import { Notify } from 'notiflix';
-const axios = require('axios').default;
+import axios from 'axios';
 
 export class SearchAPI {
   static API_KEY = '34194701-2813288863e2fdf221136bb42';

@@ -1,5 +1,5 @@
 import { Notify } from 'notiflix';
-const axios = require('axios').default;
+import axios from 'axios';
 
 export class SearchAPI {
   static API_KEY = '34194701-2813288863e2fdf221136bb42';
@@ -26,14 +26,14 @@ export class SearchAPI {
 
     const searchURL = `${SearchAPI.BASE_URL}?${searchParams}`;
 
-    if (this.isLoading === true || this.shouldLoad === false) {
-      return await Promise.reject('Search is stoped.');
-    }
-
     try {
+      if (this.isLoading === true || this.shouldLoad === false) {
+        return Promise.reject('Search is stoped.');
+      }
+
       if (this.searchQuery.trim() === '') {
         Notify.warning('Please, enter your search query!');
-        return await Promise.reject('Invalid query!');
+        return Promise.reject('Invalid query!');
       }
 
       this.isLoading = true;

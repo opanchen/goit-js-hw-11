@@ -11,6 +11,7 @@ import {
 } from './ui-gallery';
 
 const TROTTLE_DELAY = 1000;
+const trottledInfiniteScroll = throttle(checkPosition, TROTTLE_DELAY);
 
 const refs = {
   searchForm: document.querySelector('#search-form'),
@@ -133,14 +134,13 @@ async function checkPosition() {
   }
 }
 
-// checkPosition();
 function startInfiniteScroll() {
-  window.addEventListener('scroll', throttle(checkPosition, TROTTLE_DELAY));
-  window.addEventListener('resize', throttle(checkPosition, TROTTLE_DELAY));
+  window.addEventListener('scroll', trottledInfiniteScroll);
+  window.addEventListener('resize', trottledInfiniteScroll);
 }
 
 function stopInfiniteScroll() {
   newSearchAPI.shouldLoad = false;
-  window.removeEventListener('scroll', throttle(checkPosition, TROTTLE_DELAY));
-  window.removeEventListener('resize', throttle(checkPosition, TROTTLE_DELAY));
+  window.removeEventListener('scroll', trottledInfiniteScroll);
+  window.removeEventListener('resize', trottledInfiniteScroll);
 }
