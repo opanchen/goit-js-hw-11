@@ -1,0 +1,30 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+    background-color: #f5f4fa;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+} 
+
+.task-variations {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-top: 20px
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}

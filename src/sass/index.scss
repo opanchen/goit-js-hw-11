@@ -1,3 +1,11 @@
-@import './common';
-// @import './example';
-@import './search-form'
+
+@import './utils/mixines';
+@import './base/basic';
+@import './base/reset';
+@import './base/container';
+@import './base/reset';
+
+
+
+@import './components/search-form';
+@import './components/res-gallery';
